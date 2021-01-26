@@ -90,7 +90,7 @@ document
 
 function handleRestartGame() {
     gameActive=true;
-    currentPlayer="1"
+    currentPlayer="X"
     gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML=currentPlayerTurn();
     document.querySelectorAll(".cell").forEach((cell)=>cell.innerHTML="")
