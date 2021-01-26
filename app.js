@@ -53,7 +53,7 @@ function handleResultValidation() {
     }
   }
   if (roundWon) {
-    if(currentPlayer==="X){
+    if(currentPlayer==="X"){
     statusDisplay.innerHTML = winningMessage1();
     gameActive = false;
     return;}
