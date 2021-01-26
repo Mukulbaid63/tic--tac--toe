@@ -6,7 +6,9 @@ let currentPlayer = "X";
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage = () => `Congratulations! Player${currentPlayer} wins`;
+const winningMessage1 = () => `Congratulations! Player1 wins`;
+const winningMessage2 = () => `Congratulations! Player2 wins`;
+
 const winningConditions = [
   [0, 1, 2],
   [3, 4, 5],
@@ -51,9 +53,14 @@ function handleResultValidation() {
     }
   }
   if (roundWon) {
-    statusDisplay.innerHTML = winningMessage();
+    if(currentPlayer==="X){
+    statusDisplay.innerHTML = winningMessage1();
     gameActive = false;
-    return;
+    return;}
+  else{
+    statusDisplay.innerHTML = winningMessage2();
+    gameActive = false;
+    return;}
   }
   let roundDraw = !gameState.includes("");
   if (roundDraw) {
@@ -64,6 +71,7 @@ function handleResultValidation() {
   handlePlayerChange()
 }
 function handlePlayerChange() {
+  
   currentPlayer = currentPlayer === "X" ? "O" : "X";
   statusDisplay.innerHTML = currentPlayerTurn();
 }
