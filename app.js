@@ -6,9 +6,7 @@ let currentPlayer = "X";
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage1 = () => `Congratulations! Player1 wins`;
-const winningMessage2= () => `Congratulations! Player2 wins`;
-
+const winningMessage = () => `Congratulations! Player${currentPlayer} wins`;
 const winningConditions = [
   [0, 1, 2],
   [3, 4, 5],
@@ -53,14 +51,9 @@ function handleResultValidation() {
     }
   }
   if (roundWon) {
-    if(currentPlayer==="X"){
-    statusDisplay.innerHTML = winningMessage1()
+    statusDisplay.innerHTML = winningMessage();
     gameActive = false;
-    return;}
-    else{
-    statusDisplay.innerHTML = winningMessage2)
-    gameActive = false;
-    return;}
+    return;
   }
   let roundDraw = !gameState.includes("");
   if (roundDraw) {
