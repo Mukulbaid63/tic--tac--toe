@@ -7,7 +7,7 @@ let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const winningMessage1 = () => `Congratulations! Player1 wins`;
-const winningMessage2= () => `Congratulations! Player2wins`;
+const winningMessage2= () => `Congratulations! Player2 wins`;
 
 const winningConditions = [
   [0, 1, 2],
